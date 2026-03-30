@@ -2,7 +2,7 @@
  * API Service — Centralized HTTP client for all backend calls.
  */
 
-const BASE_URL = '/api';
+const BASE_URL = import.meta.env.VITE_API_BASE_URL || '/api';
 
 async function request(url, options = {}) {
   const config = {
